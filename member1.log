@@ -1,0 +1,44 @@
+17:31:23,926 o.a.shiro.web.servlet.OncePerRequestFilter: Filter 'ShiroFilter' not yet executed.  Executing now.
+17:31:23,936 o.a.shiro.mgt.DefaultSecurityManager: Context already contains a SecurityManager instance.  Returning.
+17:31:23,937 o.a.shiro.session.mgt.AbstractValidatingSessionManager: Attempting to retrieve session with key org.apache.shiro.web.session.mgt.WebSessionKey@82ba568
+17:31:23,942 o.a.shiro.web.servlet.SimpleCookie: Found 'JSESSIONID' cookie value [node01fvw0rspkpm3ndltsw4kdf1yq5.node0]
+ 5:31:24     com.hazelcast.internal.partition.impl.PartitionStateManager INFO: [127.0.0.1]:5701 [tut-shiro] [3.7.2] Initializing cluster partition table arrangement...
+17:31:24,126 DEBUG o.a.shiro.mgt.DefaultSecurityManager: Resolved SubjectContext context session is invalid.  Ignoring and creating an anonymous (session-less) Subject instance.
+o.a.shiro.session.UnknownSessionException: There is no session with id [node01fvw0rspkpm3ndltsw4kdf1yq5.node0]
+	at o.a.shiro.session.mgt.eis.AbstractSessionDAO.readSession(AbstractSessionDAO.java:170) ~[shiro-core-1.4.1.jar:1.4.1]
+	at o.a.shiro.session.mgt.eis.CachingSessionDAO.readSession(CachingSessionDAO.java:261) ~[shiro-core-1.4.1.jar:1.4.1]
+	at o.a.shiro.session.mgt.DefaultSessionManager.retrieveSessionFromDataSource(DefaultSessionManager.java:236) ~[shiro-core-1.4.1.jar:1.4.1]
+	at o.a.shiro.session.mgt.DefaultSessionManager.retrieveSession(DefaultSessionManager.java:222) ~[shiro-core-1.4.1.jar:1.4.1]
+	at o.a.shiro.session.mgt.AbstractValidatingSessionManager.doGetSession(AbstractValidatingSessionManager.java:118) ~[shiro-core-1.4.1.jar:1.4.1]
+	at o.a.shiro.session.mgt.AbstractNativeSessionManager.lookupSession(AbstractNativeSessionManager.java:148) ~[shiro-core-1.4.1.jar:1.4.1]
+	at o.a.shiro.session.mgt.AbstractNativeSessionManager.getSession(AbstractNativeSessionManager.java:140) ~[shiro-core-1.4.1.jar:1.4.1]
+	at o.a.shiro.mgt.SessionsSecurityManager.getSession(SessionsSecurityManager.java:156) ~[shiro-core-1.4.1.jar:1.4.1]
+	at o.a.shiro.mgt.DefaultSecurityManager.resolveContextSession(DefaultSecurityManager.java:461) ~[shiro-core-1.4.1.jar:1.4.1]
+	at o.a.shiro.mgt.DefaultSecurityManager.resolveSession(DefaultSecurityManager.java:447) ~[shiro-core-1.4.1.jar:1.4.1]
+	at o.a.shiro.mgt.DefaultSecurityManager.createSubject(DefaultSecurityManager.java:343) ~[shiro-core-1.4.1.jar:1.4.1]
+	at o.a.shiro.subject.Subject$Builder.buildSubject(Subject.java:845) ~[shiro-core-1.4.1.jar:1.4.1]
+	at o.a.shiro.web.subject.WebSubject$Builder.buildWebSubject(WebSubject.java:148) ~[shiro-web-1.4.1.jar:1.4.1]
+	at o.a.shiro.web.servlet.AbstractShiroFilter.createSubject(AbstractShiroFilter.java:292) ~[shiro-web-1.4.1.jar:1.4.1]
+	at o.a.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:359) ~[shiro-web-1.4.1.jar:1.4.1]
+	at o.a.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) ~[shiro-web-1.4.1.jar:1.4.1]
+	at o.e.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:201) ~[jetty-servlet-9.4.44.v20210927.jar:9.4.44.v20210927]
+...
+17:31:24,166 o.a.shiro.mgt.DefaultSecurityManager: No identity (PrincipalCollection) found in the context.  Looking for a remembered identity.
+17:31:24,167 o.a.shiro.web.servlet.SimpleCookie: No 'rememberMe' cookie value
+17:31:24,167 o.a.shiro.mgt.DefaultSecurityManager: No remembered identity found.  Returning original context.
+17:31:24,171 o.a.shiro.subject.support.DelegatingSubject: attempting to get session; create = false; session is null = true; session has id = false
+17:31:24,171 o.a.shiro.subject.support.DelegatingSubject: attempting to get session; create = false; session is null = true; session has id = false
+17:31:24,172 o.a.shiro.subject.support.DelegatingSubject: attempting to get session; create = false; session is null = true; session has id = false
+17:31:24,172 o.a.shiro.subject.support.DelegatingSubject: attempting to get session; create = false; session is null = true; session has id = false
+17:31:24,172 o.a.shiro.subject.support.DelegatingSubject: attempting to get session; create = false; session is null = true; session has id = false
+17:31:24,176 o.a.shiro.subject.support.DelegatingSubject: attempting to get session; create = false; session is null = true; session has id = false
+17:31:24,177 o.a.shiro.web.servlet.AbstractShiroFilter: No FilterChain configured for the current request.  Using the default.
+17:31:25,045 o.a.shiro.subject.support.DelegatingSubject: attempting to get session; create = false; session is null = true; session has id = false
+17:31:25,046 o.a.shiro.subject.support.DelegatingSubject: attempting to get session; create = true; session is null = true; session has id = false
+17:31:25,046 o.a.shiro.subject.support.DelegatingSubject: Starting session for host 127.0.0.1
+17:31:25,049 o.a.shiro.session.mgt.DefaultSessionManager: Creating session for host 127.0.0.1
+17:31:25,049 o.a.shiro.session.mgt.DefaultSessionManager: Creating new EIS record for new session instance [org.apache.shiro.session.mgt.SimpleSession,id=null]
+17:31:25,118 o.a.shiro.web.servlet.SimpleCookie: calculated path: /
+17:31:25,119 o.a.shiro.web.servlet.SimpleCookie: Added HttpServletResponse Cookie [JSESSIONID=6cc6cb72-3fcb-4110-a624-8b4a05feb3f2; Path=/; HttpOnly]
+17:31:25,119 o.a.shiro.web.session.mgt.DefaultWebSessionManager: Set session ID cookie for session with id 6cc6cb72-3fcb-4110-a624-8b4a05feb3f2
+17:31:25,478 o.a.shiro.subject.support.DelegatingSubject: attempting to get session; create = false; session is null = false; session has id = true

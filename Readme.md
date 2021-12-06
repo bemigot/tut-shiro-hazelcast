@@ -51,3 +51,16 @@ Hazelcast 2.4 configuration code produces this misleading error message:
 [Fatal Error] :6:3: The element type "hr" must be terminated by the matching end-tag "</hr>".
 ```
 it doesn't seem affecting Hazelcast or this webapp functioning.
+
+## Log sample
+```
+:00,002 o.a.shiro.web.servlet.OncePerRequestFilter: Filter 'ShiroFilter' not yet executed.  Executing now.
+:00,009 o.a.shiro.mgt.DefaultSecurityManager: Context already contains a SecurityManager instance.  Returning.
+:00,010 o.a.shiro.session.mgt.AbstractValidatingSessionManager: Attempting to retrieve session with key org.apache.shiro.web.session.mgt.WebSessionKey@4112edf5
+:00,010 o.a.shiro.web.servlet.SimpleCookie: Found 'JSESSIONID' cookie value [6cc6cb72-3fcb-4110-a624-8b4a05feb3f2]
+:00,028 o.a.shiro.session.mgt.AbstractValidatingSessionManager: Attempting to retrieve session with key org.apache.shiro.web.session.mgt.WebSessionKey@2541ce89
+:00,031 o.a.shiro.session.mgt.AbstractValidatingSessionManager: Attempting to retrieve session with key org.apache.shiro.web.session.mgt.WebSessionKey@2541ce89
+:00,038 o.a.shiro.session.mgt.AbstractValidatingSessionManager: Attempting to retrieve session with key org.apache.shiro.web.session.mgt.WebSessionKey@2541ce89
+:00,041 o.a.shiro.session.mgt.AbstractValidatingSessionManager: Attempting to retrieve session with key org.apache.shiro.web.session.mgt.WebSessionKey@2541ce89
+:00,048 o.a.shiro.subject.support.DelegatingSubject: attempting to get session; create = false; session is null = false; session has id = true
+```
